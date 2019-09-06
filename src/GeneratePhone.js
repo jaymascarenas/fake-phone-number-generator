@@ -19,7 +19,11 @@ class GeneratePhone extends Component {
   };
 
   callback = () => {
-    this.state.checked ? navigator.clipboard.writeText(this.state.phoneUnformatted) : navigator.clipboard.writeText(this.state.phone);
+    if (navigator.clipboard) {
+      this.state.checked ? navigator.clipboard.writeText(this.state.phoneUnformatted) : navigator.clipboard.writeText(this.state.phone);
+    } else {
+      alert('Sorry!! Click to Copy to Clipboard is not available for your browser. Please manually copy your number');
+    }
   };
 
   onCheck = () => {
@@ -46,6 +50,7 @@ class GeneratePhone extends Component {
       <div>
         <div className="container" style={this.containerStyles}>
           <h3 className="header">CakeKiller's Phone Number Generator</h3>
+          <p>Clicking "Generate New Phone Number" stores the number in your clipboard for easy pasting to other applications</p>
           <h2>{this.state.checked ? this.state.phoneUnformatted : this.state.phone}</h2>
           <label className="checkbox-container">
             Format?

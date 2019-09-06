@@ -19,6 +19,7 @@ body {
 
 .header {
   color: green;
+  margin-bottom: 5px;
 }
 
 .container {
@@ -26,21 +27,31 @@ body {
   max-width: 600px;
   margin: 0 auto;
   border: 2px solid #333333;
-  border-radius: 10px;
+  border-radius: 5px;
   background: #ffffff;
   margin-top: 20%;
+  -webkit-box-shadow: 6px 4px 15px 4px rgba(0, 0, 0, 0.73);
+  box-shadow: 6px 4px 15px 4px rgba(0, 0, 0, 0.73);
 }
 
 .container h2 {
-  width: 100%;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.container p {
+  font-size: 11px;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .container button {
   background: rgb(0, 128, 1);
   color: #ffffff;
-  width: 30%;
-  padding: 10px;
+  width: 50%;
+  padding: 15px;
   margin-bottom: 20px;
+  font-size: 16px;
   transition: 0.3s all;
   outline: none;
   border-radius: 5px;
@@ -57,7 +68,7 @@ body {
   position: relative;
   margin-bottom: 22px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
