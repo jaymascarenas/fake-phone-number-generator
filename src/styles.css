@@ -5,6 +5,8 @@ body {
   align-items: center;
   background: url(goldmember.jpg) no-repeat 50% / cover;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 #root {
@@ -64,14 +66,11 @@ body {
 
 /* Customize the label (the container) */
 .checkbox-container {
-  display: block;
-  position: relative;
+  display: flex;
+  justify-content: center;
   margin-bottom: 22px;
   cursor: pointer;
   font-size: 18px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   outline: none;
 }
@@ -87,9 +86,8 @@ body {
 
 /* Create a custom checkbox */
 .checkmark {
-  position: absolute;
-  bottom: -2px;
-  left: 58%;
+  position: relative;
+  margin-left: 10px;
   height: 25px;
   width: 25px;
   background-color: #eee;
@@ -128,4 +126,10 @@ body {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+@media(max-width:321px) {
+  .container h2 {
+    font-size: 20px;
+  }
 }
