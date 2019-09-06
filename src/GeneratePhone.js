@@ -39,7 +39,6 @@ class GeneratePhone extends Component {
       },
       this.callback
     );
-    console.log(this.state.phone);
   };
 
   render() {
@@ -50,7 +49,7 @@ class GeneratePhone extends Component {
           <h2>{this.state.checked ? this.state.phoneUnformatted : this.state.phone}</h2>
           <label className="checkbox-container">
             Format?
-            <input type="checkbox" onClick={this.onCheck} checked={!this.state.checked} />
+            <input type="checkbox" onChange={this.onCheck} checked={!this.state.checked} />
             <span className="checkmark"></span>
           </label>
           <button onClick={this.generate}>Generate New Phone Number</button>
